@@ -1,7 +1,11 @@
 # -*- mode: python ; coding: utf-8 -*-
+import os
+
 from PyInstaller.utils.hooks import collect_data_files
 
-datas = [('icon.ico', '.'), ('hooks.json', '.')]
+datas = [('icon.ico', '.')]
+if os.path.exists('hooks.json'):  # optional linter data, not in the public repo
+    datas.append(('hooks.json', '.'))
 datas += collect_data_files('googleapiclient')
 
 
