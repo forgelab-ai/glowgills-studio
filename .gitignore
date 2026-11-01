@@ -1,0 +1,20 @@
+# Python and build output
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+
+# Credentials never belong in the repo (the app keeps its own in %APPDATA%\GlowgillsStudio)
+client_secret*.json
+*token*.json
+config.json
+state.json
+
+# Separately licensed linters from Claude skills (optional, see core.py)
+yt_title.py
+yt_hookscore.py
+hooks.json
+
+# Personal setup notes
+راهنمای-راه‌اندازی.md
